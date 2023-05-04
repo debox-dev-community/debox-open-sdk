@@ -1,58 +1,60 @@
 {
-	"name": "monorepo-rust-typescript",
+	"name": "debox-open-sdk",
 	"version": "0.0.0",
 	"private": true,
 	"author": "vadxq",
-  "license": "MIT",
+	"license": "MIT",
 	"workspaces": [
 		"apps/*",
 		"packages/*"
 	],
 	"devDependencies": {
-		"@commitlint/cli": "^17.4.4",
-		"@commitlint/config-conventional": "^17.4.4",
-		"@types/eslint": "^8.4.10",
-		"@types/node": "^18.15.0",
+		"@changesets/cli": "^2.26.1",
+		"@commitlint/cli": "^17.6.1",
+		"@commitlint/config-conventional": "^17.6.1",
+		"@types/eslint": "^8.37.0",
+		"@types/node": "^18.16.3",
 		"@types/prettier": "^2.7.2",
-		"dprint": "^0.35.0",
-		"eslint": "^8.30.0",
+		"dprint": "^0.35.4",
+		"eslint": "^8.39.0",
 		"eslint-config-custom": "workspace:*",
 		"husky": "^8.0.3",
-		"prettier": "^2.8.4",
-		"turbo": "^1.8.3",
-		"typescript": "^4.9.4"
+		"prettier": "^2.8.8",
+		"turbo": "^1.9.3",
+		"typescript": "^5.0.4"
 	},
 	"scripts": {
-		"feapp": "pnpm --filter=./apps/feapp",
-		"feapp:dev": "turbo run dev --scope=@monorepo/feapp",
-		"beapp:dev": "cargo watch -x run -p beapp -w ./apps/beapp",
+		"nodejs": "pnpm --filter=./apps/node",
+		"nodejs:dev": "turbo run dev --scope=@monorepo/node",
+		"rust:dev": "cargo watch -x run -p rust -w ./apps/rust",
 		"build": "turbo run build --parallel",
 		"dev": "turbo run dev --parallel --no-cache",
 		"format": "pnpm dprint fmt",
 		"lint": "turbo run lint --parallel",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"changeset": "changeset"
 	},
 	"repository": {
-    "type": "git",
-    "url": "git+https://github.com/vadxq/monorepo-rust-typescript.git"
-  },
-  "keywords": [
-    "monorepo",
+		"type": "git",
+		"url": "git+https://github.com/DeBoxDAO/debox-open-sdk.git"
+	},
+	"keywords": [
+		"monorepo",
 		"rust",
 		"typescript",
 		"solid"
-  ],
+	],
 	"bugs": {
-    "url": "https://github.com/vadxq/monorepo-rust-typescript/issues"
-  },
-  "homepage": "https://github.com/vadxq/monorepo-rust-typescript#readme",
+		"url": "https://github.com/DeBoxDAO/debox-open-sdk/issues"
+	},
+	"homepage": "https://github.com/DeBoxDAO/debox-open-sdk#readme",
 	"commitlint": {
 		"extends": [
 			"@commitlint/config-conventional"
 		]
 	},
 	"engines": {
-		"node": ">=16.0.0"
+		"node": ">=16.15.0"
 	},
-	"packageManager": "pnpm@7.19.0"
+	"packageManager": "pnpm@8.4.0"
 }

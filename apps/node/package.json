@@ -1,0 +1,17 @@
+{
+	"name": "@deboxdao/debox-open-sdk",
+	"scripts": {
+		"dev": "solid-start dev",
+		"build": "solid-start build",
+		"start": "solid-start start",
+		"lint": "eslint \"**/*.{js,jsx,ts,tsx}\""
+	},
+	"type": "module",
+	"main": "./dist/index.js",
+	"dependencies": {
+		"typescript": "^5.0.4"
+	},
+	"engines": {
+		"node": ">=16"
+	}
+}

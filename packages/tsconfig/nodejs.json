@@ -1,0 +1,7 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "nodejs",
+	"extends": "./base.json",
+	"include": ["src", "vite-env.d.ts"],
+	"exclude": ["dist", "build", "node_modules"]
+}
