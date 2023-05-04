@@ -1,9 +1,3 @@
-export async function testBuild() {
-	return await resloveBoolean()
-}
+import Client from './client'
 
-function resloveBoolean() {
-	return new Promise((reslove) => {
-		reslove(true)
-	})
-}
+export { Client }
