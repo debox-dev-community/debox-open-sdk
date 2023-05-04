@@ -1,17 +1,30 @@
 {
 	"name": "@deboxdao/debox-open-sdk",
 	"scripts": {
-		"dev": "solid-start dev",
-		"build": "solid-start build",
-		"start": "solid-start start",
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"playground": "node --experimental-specifier-resolution=node ./playground/index.js",
 		"lint": "eslint \"**/*.{js,jsx,ts,tsx}\""
 	},
 	"type": "module",
-	"main": "./dist/index.js",
+	"main": "./dist/main.js",
+	"exports": {
+		".": {
+			"types": "./dist/main.d.ts",
+			"require": "./dist/main.js",
+			"import": "./dist/main.mjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
 	"dependencies": {
 		"typescript": "^5.0.4"
 	},
 	"engines": {
 		"node": ">=16"
+	},
+	"devDependencies": {
+		"tsup": "^6.7.0"
 	}
 }

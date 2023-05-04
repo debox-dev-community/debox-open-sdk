@@ -1,12 +1,11 @@
 {
-  "extends": "tsconfig/nodejs.json",
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["src/*"]
-    }
-  }
+	"extends": "tsconfig/nodejs.json",
+	"include": ["**/*.ts", "**/*.tsx", "playground/index.js"],
+	"exclude": ["node_modules"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["src/*"]
+		}
+	}
 }
-
