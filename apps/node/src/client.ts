@@ -27,52 +27,52 @@ class Client {
 		console.log(this.endpoint)
 	}
 	async registerCallbakUrl(body: {
-    registerUrl?: string;
-    httpMethod?: string;
-  }) {
-    try {
-      const apiUrl = '/openapi/register_callbak_url';
+		registerUrl?: string
+		httpMethod?: string
+	}) {
+		try {
+			const apiUrl = '/openapi/register_callbak_url'
 			const res = await request(this.endpoint + apiUrl, {
 				method: 'POST',
-				body: { url: body.registerUrl || '', http_method: body.httpMethod  || 'POST' },
+				body: { url: body.registerUrl || '', http_method: body.httpMethod || 'POST' },
 				headers: {
 					'X-Chat-Bodyrawsize': JSON.stringify(body).length.toString(),
-          'User-Agent': this.userAgent,
+					'User-Agent': this.userAgent,
 					'Content-Type': 'application/json',
 					'Accept-Encoding': 'deflate',
 					'X-Api-Key': this.apiKey,
-          'X-Chat-Apiversion': this.authVersion
-        }
+					'X-Chat-Apiversion': this.authVersion,
+				},
 			})
 			return res
 		} catch (error) {
 			console.log(error)
-      return;
+			return
 		}
 	}
 	async sendChatMsg(body: {
-      toUserId?: string;
-      groupId?: string;
-      message?: string;
-    }) {
+		toUserId?: string
+		groupId?: string
+		message?: string
+	}) {
 		try {
-      const apiUrl = '/openapi/send_chat_message';
+			const apiUrl = '/openapi/send_chat_message'
 			const res = await request(this.endpoint + apiUrl, {
 				method: 'POST',
 				body: { to_user_id: body.toUserId || '', group_id: body.groupId || '', message: body.message || '' },
 				headers: {
 					'X-Chat-Bodyrawsize': JSON.stringify(body).length.toString(),
-          'User-Agent': this.userAgent,
+					'User-Agent': this.userAgent,
 					'Content-Type': 'application/json',
 					'Accept-Encoding': 'deflate',
 					'X-Api-Key': this.apiKey,
-          'X-Chat-Apiversion': this.authVersion
-        }
+					'X-Chat-Apiversion': this.authVersion,
+				},
 			})
 			return res
 		} catch (error) {
 			console.log(error)
-      return;
+			return
 		}
 	}
 }

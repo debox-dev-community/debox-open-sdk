@@ -21,7 +21,7 @@ const request = async (url: string, config?: RequestOptions) => {
 		credentials: 'include',
 		cache: 'no-cache',
 		mode: 'cors',
-		responseType: 'JSON'
+		responseType: 'JSON',
 	}
 
 	const configs: RequestOptions = {
@@ -44,7 +44,7 @@ const request = async (url: string, config?: RequestOptions) => {
 		body: configs.body,
 	}
 
-  console.log(finalConfig);
+	console.log(finalConfig)
 
 	return fetch(`${url}`, finalConfig)
 		.then((response: Response) => {

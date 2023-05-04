@@ -4,13 +4,13 @@ const init = async () => {
 	const data = new Client({
 		endpoint: 'https://open.debox.pro',
 		apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-		userAgent: 'golang-sdk-v0.1.0'
+		userAgent: 'golang-sdk-v0.1.0',
 	})
 	const res = await data.registerCallbakUrl({
 		registerUrl: 'xxxx',
-		httpMethod: 'POST'
+		httpMethod: 'POST',
 	})
-	console.log(res);
+	console.log(res)
 }
 
 init()
