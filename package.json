@@ -24,9 +24,8 @@
 		"typescript": "^5.0.4"
 	},
 	"scripts": {
-		"nodejs": "pnpm --filter=./apps/node",
-		"nodejs:dev": "turbo run dev --scope=@monorepo/node",
-		"rust:dev": "cargo watch -x run -p rust -w ./apps/rust",
+		"dev:nodejs": "turbo run dev --scope=@deboxdao/debox-open-sdk",
+		"dev:rust": "cargo watch -x run -p rust -w ./packages/rust",
 		"build": "turbo run build --parallel",
 		"dev": "turbo run dev --parallel --no-cache",
 		"format": "pnpm dprint fmt",
