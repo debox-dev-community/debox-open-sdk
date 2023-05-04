@@ -42,7 +42,8 @@
 		"monorepo",
 		"rust",
 		"typescript",
-		"solid"
+		"DeBox",
+		"DeBoxDAO"
 	],
 	"bugs": {
 		"url": "https://github.com/DeBoxDAO/debox-open-sdk/issues"

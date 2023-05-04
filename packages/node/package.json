@@ -1,6 +1,22 @@
 {
 	"name": "@deboxdao/debox-open-sdk",
-	"version": "1.0.0-beta.0",
+	"version": "1.0.0-beta.4",
+	"license": "MIT",
+	"author": "vadxq",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DeBoxDAO/debox-open-sdk.git"
+	},
+	"keywords": [
+		"typescript",
+		"DeBox",
+		"DeBoxDAO",
+		"DeBox Open SDK"
+	],
+	"bugs": {
+		"url": "https://github.com/DeBoxDAO/debox-open-sdk/issues"
+	},
+	"homepage": "https://github.com/DeBoxDAO/debox-open-sdk#readme",
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
