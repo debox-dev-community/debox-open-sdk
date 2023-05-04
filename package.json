@@ -32,7 +32,8 @@
 		"format": "pnpm dprint fmt",
 		"lint": "turbo run lint --parallel",
 		"prepare": "husky install",
-		"changeset": "changeset"
+		"changeset": "changeset",
+		"publish:release": "changeset publish"
 	},
 	"repository": {
 		"type": "git",

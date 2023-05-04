@@ -5,7 +5,7 @@ class Client {
 	apiKey: string
 	userAgent: string // default defaultLogUserAgent
 	requestTimeOut: number // seconds to wait
-	retryTimeOut: number // times to retry
+	retryTimes: number // retry times to retry
 	authVersion: string // AuthVersionType
 
 	constructor(config: {
@@ -13,14 +13,14 @@ class Client {
 		apiKey: string
 		userAgent?: string
 		requestTimeOut?: number
-		retryTimeOut?: number
+		retryTimes?: number
 		authVersion?: string
 	}) {
 		this.endpoint = config.endpoint
 		this.apiKey = config.apiKey
 		this.userAgent = config.userAgent || '@deboxdao/debox-open-sdk'
 		this.requestTimeOut = config.requestTimeOut || 30
-		this.retryTimeOut = config.retryTimeOut || 3
+		this.retryTimes = config.retryTimes || 3
 		this.authVersion = config.authVersion || '0.6.0'
 	}
 	init() {
@@ -32,17 +32,21 @@ class Client {
 	}) {
 		try {
 			const apiUrl = '/openapi/register_callbak_url'
+			const req = { url: body.registerUrl || '', http_method: body.httpMethod || 'POST' }
 			const res = await request(this.endpoint + apiUrl, {
 				method: 'POST',
-				body: { url: body.registerUrl || '', http_method: body.httpMethod || 'POST' },
+				body: JSON.stringify(req),
 				headers: {
-					'X-Chat-Bodyrawsize': JSON.stringify(body).length.toString(),
+					'X-Chat-Bodyrawsize': JSON.stringify(req).length.toString(),
 					'User-Agent': this.userAgent,
 					'Content-Type': 'application/json',
 					'Accept-Encoding': 'deflate',
 					'X-Api-Key': this.apiKey,
 					'X-Chat-Apiversion': this.authVersion,
 				},
+			}, {
+				retryTimes: this.retryTimes,
+				requestTimeOut: this.requestTimeOut,
 			})
 			return res
 		} catch (error) {
@@ -57,17 +61,21 @@ class Client {
 	}) {
 		try {
 			const apiUrl = '/openapi/send_chat_message'
+			const req = { to_user_id: body.toUserId || '', group_id: body.groupId || '', message: body.message || '' }
 			const res = await request(this.endpoint + apiUrl, {
 				method: 'POST',
-				body: { to_user_id: body.toUserId || '', group_id: body.groupId || '', message: body.message || '' },
+				body: JSON.stringify(req),
 				headers: {
-					'X-Chat-Bodyrawsize': JSON.stringify(body).length.toString(),
+					'X-Chat-Bodyrawsize': JSON.stringify(req).length.toString(),
 					'User-Agent': this.userAgent,
 					'Content-Type': 'application/json',
 					'Accept-Encoding': 'deflate',
 					'X-Api-Key': this.apiKey,
 					'X-Chat-Apiversion': this.authVersion,
 				},
+			}, {
+				retryTimes: this.retryTimes,
+				requestTimeOut: this.requestTimeOut,
 			})
 			return res
 		} catch (error) {
