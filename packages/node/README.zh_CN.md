@@ -1,13 +1,15 @@
 # DeBox 开放 SDK
 
+> DeBox Open SDK: DeBox 开放 SDK，专为方便Nodejs开发者打造
+
 <p align="center">
-  <a href="https://github.com/deboxdao/debox-open-sdk/blob/main/LICENSE">
-    <img src="https://img.shields.io/npm/l/@deboxdao/debox-open-sdk?label=@deboxdao/debox-open-sdk" alt="License" />
+  <a href="https://github.com/deboxlove/debox-open-sdk/blob/main/LICENSE">
+    <img src="https://img.shields.io/npm/l/debox-open-sdk?label=debox-open-sdk" alt="License" />
   </a>
-  <a href="https://www.npmjs.com/package/@deboxdao/debox-open-sdk">
-    <img src="https://img.shields.io/npm/dt/@deboxdao/debox-open-sdk.svg" alt="Total Downloads">
+  <a href="https://www.npmjs.com/package/debox-open-sdk">
+    <img src="https://img.shields.io/npm/dt/debox-open-sdk.svg" alt="Total Downloads">
   </a>
-  <a href="https://github.com/deboxdao/debox-open-sdk/releases">
+  <a href="https://github.com/deboxlove/debox-open-sdk/releases">
     <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version" />
   </a>
 </p>
@@ -18,7 +20,7 @@
 
 本项目是Debox社交聊天服务（Chat Service）API的Nodejs编程接口，Chat Service Rest API的封装和实现，帮助Nodejs开发人员更快编程使用Debox的聊天消息服务。
 
-详细API接口以及含义请参考：[https://docs.deboxdao.xyz](https://docs.deboxdao.xyz)
+详细API接口以及含义请参考：[https://docs.debox.love](https://docs.debox.love)
 
 ### 入门
 
@@ -28,28 +30,28 @@ Nodejs SDK封装了DeBox服务的所有API接口，您可以通过Nodejs SDK轻�
 
 <br />
 
-1. 安装 `@deboxdao/debox-open-sdk`.
+1. 安装 `debox-open-sdk`.
 
 ```bash
-npm i @deboxdao/debox-open-sdk
+npm i debox-open-sdk
 
 # 或者
-pnpm add @deboxdao/debox-open-sdk
+pnpm add debox-open-sdk
 
 # 或者
-yarn add @deboxdao/debox-open-sdk
+yarn add debox-open-sdk
 ```
 
 <br />
 
-2. 一旦你安装了`@deboxdao/debox-open-sdk` 你需要清楚你使用的是commonjs还是es模块。 本SDK同时支持，您可以参考下面的例子使用：
+2. 一旦你安装了`debox-open-sdk` 你需要清楚你使用的是commonjs还是es模块。 本SDK同时支持，您可以参考下面的例子使用：
 
 ```js
 // Commonjs
-const { Client } = require('@deboxdao/debox-open-sdk')
+const { Client } = require('debox-open-sdk')
 
 // ES modules
-import { Client } from '@deboxdao/debox-open-sdk'
+import { Client } from 'debox-open-sdk'
 ```
 
 <br />

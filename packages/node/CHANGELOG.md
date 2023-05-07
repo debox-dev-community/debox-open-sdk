@@ -1,4 +1,4 @@
-# @deboxdao/debox-open-sdk
+# debox-open-sdk
 
 ## 1.0.0
 

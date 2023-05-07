@@ -1,5 +1,5 @@
 {
-	"name": "debox-open-sdk",
+	"name": "debox-open-sdks",
 	"version": "0.0.0",
 	"private": true,
 	"author": "vadxq",
@@ -20,11 +20,12 @@
 		"eslint-config-custom": "workspace:*",
 		"husky": "^8.0.3",
 		"prettier": "^2.8.8",
+		"tsconfig": "workspace:*",
 		"turbo": "^1.9.3",
 		"typescript": "^5.0.4"
 	},
 	"scripts": {
-		"dev:nodejs": "turbo run dev --scope=@deboxdao/debox-open-sdk",
+		"dev:nodejs": "turbo run dev --scope=@deboxlove/debox-open-sdk",
 		"dev:rust": "cargo watch -x run -p rust -w ./packages/rust",
 		"build": "turbo run build --parallel",
 		"dev": "turbo run dev --parallel --no-cache",
@@ -36,19 +37,19 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/DeBoxDAO/debox-open-sdk.git"
+		"url": "git+https://github.com/DeBoxLove/debox-open-sdk.git"
 	},
 	"keywords": [
-		"monorepo",
-		"rust",
-		"typescript",
+		"Monorepo",
+		"Rust",
+		"Typescript",
 		"DeBox",
-		"DeBoxDAO"
+		"DeBoxLove"
 	],
 	"bugs": {
-		"url": "https://github.com/DeBoxDAO/debox-open-sdk/issues"
+		"url": "https://github.com/DeBoxLove/debox-open-sdk/issues"
 	},
-	"homepage": "https://github.com/DeBoxDAO/debox-open-sdk#readme",
+	"homepage": "https://github.com/DeBoxLove/debox-open-sdk#readme",
 	"commitlint": {
 		"extends": [
 			"@commitlint/config-conventional"
