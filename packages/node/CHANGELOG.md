@@ -1,5 +1,11 @@
 # debox-open-sdk
 
+## 1.0.1
+
+### Patch Changes
+
+- fetch compatibility and get group id
+
 ## 1.0.0
 
 ### Major Changes
