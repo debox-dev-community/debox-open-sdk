@@ -18,7 +18,7 @@ class Client {
 	}) {
 		this.endpoint = config.endpoint
 		this.apiKey = config.apiKey
-		this.userAgent = config.userAgent || '@deboxdao/debox-open-sdk'
+		this.userAgent = config.userAgent || 'debox-open-sdk'
 		this.requestTimeOut = config.requestTimeOut || 30
 		this.retryTimes = config.retryTimes || 3
 		this.authVersion = config.authVersion || '0.6.0'
@@ -61,7 +61,7 @@ class Client {
 	}) {
 		try {
 			const apiUrl = '/openapi/send_chat_message'
-			const req = { to_user_id: body.toUserId || '', group_id: body.groupId || '', message: body.message || '' }
+			const req = { to_user_id: body.toUserId || 'DeBox&Love', group_id: body.groupId || '', message: body.message || '' }
 			const res = await request(this.endpoint + apiUrl, {
 				method: 'POST',
 				body: JSON.stringify(req),
@@ -81,6 +81,28 @@ class Client {
 		} catch (error) {
 			console.log(error)
 			return
+		}
+	}
+	async getGroupId({ inviteUrl} : { inviteUrl: string }) {
+		try {
+			const apiUrl = 'https://debox.love/api/openapi/group_id'
+			const res = await request(`${apiUrl}?inviteUrl=${inviteUrl}`, {
+				method: 'GET',
+				headers: {
+					'User-Agent': this.userAgent,
+					'Content-Type': 'application/json',
+					'Accept-Encoding': 'deflate',
+					'X-Api-Key': this.apiKey,
+					'X-Chat-Apiversion': this.authVersion,
+				},
+			}, {
+				retryTimes: this.retryTimes,
+				requestTimeOut: this.requestTimeOut,
+			})
+			return res
+		} catch (error) {
+			console.log(error)
+			return false
 		}
 	}
 }

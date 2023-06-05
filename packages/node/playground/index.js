@@ -6,9 +6,8 @@ const init = async () => {
 		apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 		userAgent: 'golang-sdk-v0.1.0',
 	})
-	const res = await data.registerCallbakUrl({
-		registerUrl: 'xxxx',
-		httpMethod: 'POST',
+	const res = await data.getGroupId({
+		inviteUrl: 'https://debox.site/group/00021pru'
 	})
 	console.log(res)
 }

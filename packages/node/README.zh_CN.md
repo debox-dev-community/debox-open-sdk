@@ -87,3 +87,11 @@ const res = await data.sendChatMsg({
 	message: 'Hello World',
 })
 ```
+
+- 获取群id groupId
+
+```js
+const res = await data.getGroupId({
+	inviteUrl: 'https://debox.site/group/00021pru'
+})
+```

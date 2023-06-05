@@ -1,3 +1,6 @@
+import fetch from 'node-fetch';
+import type { Response, RequestInit } from 'node-fetch';
+
 export interface RequestOptions extends RequestInit {
 	responseType?:
 		| 'TEXT'
@@ -30,9 +33,9 @@ const request = (url: string, config?: RequestOptions, otherOption?: RequestOthe
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			credentials: 'include',
-			cache: 'no-cache',
-			mode: 'cors',
+			// credentials: 'include',
+			// cache: 'no-cache',
+			// mode: 'cors',
 			responseType: 'JSON',
 			timeout: requestTimeOut * 1000,
 		}
@@ -50,9 +53,9 @@ const request = (url: string, config?: RequestOptions, otherOption?: RequestOthe
 
 		const finalConfig: RequestInit = {
 			method: configs.method?.toUpperCase(),
-			credentials: configs.credentials,
-			mode: configs.mode,
-			cache: configs.cache,
+			// credentials: configs.credentials,
+			// mode: configs.mode,
+			// cache: configs.cache,
 			headers: configs.headers,
 			body: configs.body,
 		}

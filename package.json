@@ -25,7 +25,7 @@
 		"typescript": "^5.0.4"
 	},
 	"scripts": {
-		"dev:nodejs": "turbo run dev --scope=@deboxlove/debox-open-sdk",
+		"dev:nodejs": "turbo run dev --scope=debox-open-sdk",
 		"dev:rust": "cargo watch -x run -p rust -w ./packages/rust",
 		"build": "turbo run build --parallel",
 		"dev": "turbo run dev --parallel --no-cache",
