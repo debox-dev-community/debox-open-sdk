@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
-import type { Response, RequestInit } from 'node-fetch';
+import fetch from 'node-fetch'
+import type { RequestInit, Response } from 'node-fetch'
 
 export interface RequestOptions extends RequestInit {
 	responseType?:

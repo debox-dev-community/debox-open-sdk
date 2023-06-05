@@ -7,7 +7,7 @@ const init = async () => {
 		userAgent: 'golang-sdk-v0.1.0',
 	})
 	const res = await data.getGroupId({
-		inviteUrl: 'https://debox.site/group/00021pru'
+		inviteUrl: 'https://debox.site/group/00021pru',
 	})
 	console.log(res)
 }

@@ -83,7 +83,7 @@ class Client {
 			return
 		}
 	}
-	async getGroupId({ inviteUrl} : { inviteUrl: string }) {
+	async getGroupId({ inviteUrl }: { inviteUrl: string }) {
 		try {
 			const apiUrl = 'https://debox.love/api/openapi/group_id'
 			const res = await request(`${apiUrl}?inviteUrl=${inviteUrl}`, {

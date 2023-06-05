@@ -92,6 +92,6 @@ const res = await data.sendChatMsg({
 
 ```js
 const res = await data.getGroupId({
-	inviteUrl: 'https://debox.site/group/00021pru'
+	inviteUrl: 'https://debox.site/group/00021pru',
 })
 ```
