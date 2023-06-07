@@ -1,5 +1,11 @@
 # debox-open-sdk
 
+## 1.0.2
+
+### Patch Changes
+
+- cjs require error
+
 ## 1.0.1
 
 ### Patch Changes
