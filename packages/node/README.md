@@ -20,8 +20,6 @@
 
 This project is the Nodejs programming interface of Debox social chat service (Chat Service) API, the encapsulation and implementation of Chat Service Rest API, to help Nodejs developers program and use Debox's chat message service faster.
 
-For detailed API interface and meaning, please refer to: [https://docs.debox.love](https://docs.debox.love)
-
 ### Getting Started
 
 Open platform provides Nodejs language version SDK (Software Development Kit)

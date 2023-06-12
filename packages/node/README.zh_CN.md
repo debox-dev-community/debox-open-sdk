@@ -20,8 +20,6 @@
 
 本项目是Debox社交聊天服务（Chat Service）API的Nodejs编程接口，Chat Service Rest API的封装和实现，帮助Nodejs开发人员更快编程使用Debox的聊天消息服务。
 
-详细API接口以及含义请参考：[https://docs.debox.love](https://docs.debox.love)
-
 ### 入门
 
 开放平台提供Nodejs语言版SDK（Software Development Kit）

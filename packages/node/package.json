@@ -5,7 +5,7 @@
 	"author": "vadxq",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/DeBoxLove/debox-open-sdk.git"
+		"url": "git+https://github.com/debox-dev-community/debox-open-sdk.git"
 	},
 	"keywords": [
 		"Typescript",
@@ -14,9 +14,9 @@
 		"DeBox Open SDK"
 	],
 	"bugs": {
-		"url": "https://github.com/DeBoxLove/debox-open-sdk/issues"
+		"url": "https://github.com/debox-dev-community/debox-open-sdk/issues"
 	},
-	"homepage": "https://github.com/DeBoxLove/debox-open-sdk#readme",
+	"homepage": "https://github.com/debox-dev-community/debox-open-sdk#readme",
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
